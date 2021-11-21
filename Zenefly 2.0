@@ -2155,11 +2155,11 @@ local bindableFunction= Instance.new("BindableFunction")
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "Zenefly";
-    Text = "Enjoy.";
+    Text = "Wsgg";
     Icon = "RBXID OR BLANK";
     Duration = "DURATION IN SECONDS";
     callbakc = bindableFunction;
-    Button1 = "i will.";
+    Button1 = "okay";
 })
 
 local ALTab = Window:AddTab("Silent Aimbot")
@@ -2173,7 +2173,6 @@ folder:AddButton("Rev", function(bool)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-696.847717, 167.674957, -41.0118256, 0.626992583, 7.53169349e-09, -0.779025197, -1.29610933e-09, 1, 8.62493632e-09, 0.779025197, -4.39806902e-09, 0.626992583)
 end)
 
-
 folder:AddButton("Db", function(bool)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1087.02783, 104.254997, -268.160614, 0.0359299146, -0.000130457382, -0.99935472, -2.87694893e-05, 1, -0.000131575929, 0.99935472, 3.34783836e-05, 0.0359299146)
 end)
@@ -2183,19 +2182,42 @@ folder:AddButton("Flame", function(bool)
 end)
 
 
-local folder2 = TpsTab:AddFolder("Buy")
+
+
+local folder2 = TpsTab:AddFolder("Tps 2")
 folder2:AddButton("Buy Armor", function(bool)
     local plr = game.Players.LocalPlayer
 	local savedarmourpos = plr.Character.HumanoidRootPart.Position
 	plr.Character.HumanoidRootPart.CFrame = CFrame.new(-938.476685, -25.2498264, 570.100159, -0.0353576206, 9.85617206e-08, -0.999374807, -2.69198441e-09, 1, 9.871858e-08, 0.999374807, 6.18077589e-09, -0.0353576206)
 	wait(.2)
-
 	fireclickdetector(game.Workspace.Ignored.Shop['[High-Medium Armor] - $2300'].ClickDetector)
 	plr.Character.HumanoidRootPart.CFrame = CFrame.new(savedarmourpos)
 end)
 
 
-CreditTAB:AddButton("Made by topillesrevenge", function(bool)
+
+folder2:AddButton("food shop roof", function(bool)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-318.891174, 80.2145309, -257.177429, 0.0479469746, -5.14644114e-08, 0.998850107, -3.12971538e-09, 1, 5.16738901e-08, -0.998850107, -5.60372015e-09, 0.0479469746)
+end)
+
+
+
+folder2:AddButton("Drum Gun", function(bool)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-80.8381271, 46.828949, -85.845993, 0.999289691, 4.71884114e-08, 0.0376862474, -4.71660684e-08, 1, -1.48225032e-09, -0.0376862474, -2.96314889e-10, 0.999289691)
+end)
+
+folder2:AddButton("Rev", function(bool)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-634.463135, 80.434761, -204.232559, -0.0190527271, -1.03574322e-07, -0.999818563, 4.36709335e-09, 1, -1.03676342e-07, 0.999818563, -6.3416179e-09, -0.0190527271)
+end)
+
+
+
+
+
+
+
+
+CreditTAB:AddButton('made by topillesrevenge', function(bool)
     setclipboard("https://discord.gg/RDkG6ta3")
     wait(1)
     local function callback(text)
@@ -2209,17 +2231,21 @@ CreditTAB:AddButton("Made by topillesrevenge", function(bool)
     local bindableFunction= Instance.new("BindableFunction")
     
     game.StarterGui:SetCore("SendNotification", {
-        Title = "topillesrevenge was here";
+        Title = "Discord";
         Text = "Discord Link Copied On Clipboard";
         Icon = "RBXID OR BLANK";
         Duration = "DURATION IN SECONDS";
         callbakc = bindableFunction;
-        Button1 = "Epic";
+        Button1 = "ok.";
     })
 end)
 
 
+RCTab:AddButton("Speed Kaias (LeftShift)", function(bool)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MainNeg/Sources/main/Speed"))()
+end)
 
+RCTab:AddLabel("Enable/Disable with T// n, m to change Speed")
 
 RCTab:AddButton("Fly (X)", function(bool)
     repeat wait() 
@@ -2363,6 +2389,8 @@ ALTab:AddSwitch("AimLock", function(bool)
     DaHoodSettings.AimLock = bool
 end)
 
+
+
 ALTab:AddSwitch("Predict Lag", function(bool)
     DaHoodSettings.Prediction.Lag = bool
 end)
@@ -2375,7 +2403,7 @@ ALTab:AddSlider("FOV Size", function(value)
     Aiming.FOV = value
 end, {
     ["min"] = 0,
-    ["max"] = 100,
+    ["max"] = 400,
     ["readonly"] = false,
 })
 
@@ -2459,10 +2487,10 @@ end)
 -- // Aimlock
 RunService:BindToRenderStep("AimLock", 0, function()
     if (DaHoodSettings.AimLock and Aiming.Check() and LMFAO) then
-        -- // Vars
+
         local SelectedPart = Aiming.SelectedPart
 
-        -- // Hit to account prediction
+
         local Hit = SelectedPart.CFrame + (SelectedPart.Velocity * DaHoodSettings.Prediction)
 
         -- // Set the camera to face towards the Hit
