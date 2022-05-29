@@ -2138,7 +2138,7 @@ local themes = {
 local DaHoodSettings = {
     SilentAim = false,
     AimLock = false,
-    Prediction = 0.116968
+    Prediction = 0.124523
 }
 
 getgenv().DaHoodSettings = DaHoodSettings
